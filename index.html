@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-us">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Selector</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            header
-        </div>
-        <div class="inst">
-            <div class="button">
-                <button>button</button>
-            </div>
-            <p>Press here to generate</p>
-        </div>
-        <div class="section">
-            <section>
-                <div class="box1">box1</div>
-                <div class="box2">box2</div>
-                <div class="box3">box3</div>
-            </section>
-        </div>
-        
-        <div id="footer">
-            <footer>
-                By: David & Bob. FED21 HyperIsland
-            </footer>
-        </div>
-
-    </div>
-
-    <script src="script.js"></script>
-</body>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body>
+    <main class="main_content">
+      <header class="main_content--header">
+        <h1 class="main_content--title">group selector</h1>
+      </header>
+      <div class="button_generator--wrapper">
+        <button id="button_generator">start</button>
+          <p>press the button to start making your group</p>
+      </div>
+      <div class="group_names--circles">
+        <div class="circle name1">circle 1</div>
+        <div class="circle name2">circle 2</div>
+        <div class="circle name3">circle 3</div>
+      </div>
+    </main>
+    <footer>
+      <p>built by David & Bob. FED21 Hyper Island</p>
+    </footer>
+      <script src="script.js"></script>
+  </body>
 </html>
