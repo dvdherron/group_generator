@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis:500,600,700,800&display=swap');
 
 * {
   box-sizing: border-box;
-  
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    
+    font-family: 'Dosis', sans-serif;
+    margin: 0 5%;
+}
+
+
+.main_content--title {
+  font-weight: 800;
+  font-size: calc(2.75em + 1.5vw);
 }
