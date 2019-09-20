@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis:500,600,700,800&display=swap');
+@font-face {
+  font-family: 'Recursive Sans';
+  src: url('/assets/recursive-prop_xprn_weight_slnt_ital--2019_09_05--subset-0020_007F.woff2') format('woff2'),
+       url('/assets/recursive-prop_xprn_weight_slnt_ital--2019_09_05.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Recursive Sans','Segoe UI', Tahoma, sans-serif;
+    font-variation-settings: 'wght' 600;
     margin: 0 5%;
 }
 
 
 .main_content--title {
-  font-weight: 800;
-  font-size: calc(2.75em + 1.5vw);
+  font-variation-settings: 'wght' 850;
+  font-size: calc(6vw + 1.5vw);
 }
