@@ -207,14 +207,9 @@ body {
   }
 
   #circle3 {
-   grid-column: 4;
-   grid-row: 3;
-   align-self: normal;
-   margin: 2rem 0 0 2rem;
+    grid-column: 4;
+    grid-row: 3;
+    align-self: normal;
+    margin: 2rem 0 0 2rem;
   }
 
-  /* .group_names--circles {
-    justify-content: space-around;
-    align-items: stretch;
-  } */
-}
