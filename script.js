@@ -11,19 +11,11 @@
   circle2.addEventListener('click', pickMate);
   var circle3 = document.getElementById('circle3');
   circle3.addEventListener('click', pickMate);
-  // var circleTitle = document.querySelector('.circle_title');
-  var startOver = document.getElementById('resetBTN');
-  // startOver.addEventListener('click', resetNames);
+  
 
   function pickMate(event) {
     var randomMate = classMates[Math.floor(Math.random()*classMates.length)];
 
     event.target.firstElementChild.textContent = randomMate;
     }
-
-  // function resetNames() {
-  //   var circles = document.getElementsByClassName('.circle_title');
-  //   circles.textContent = '- - -';
-  // }
-
   }());
