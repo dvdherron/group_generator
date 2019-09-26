@@ -59,7 +59,12 @@ body {
   font-size: calc(48px + 1vw);
   line-height: calc(1.1em + 0.5vw);
   text-align: right;
-  margin: 2rem 0 0 0;;
+  margin: 2rem 0 0 0;
+  transition: font-variation-settings .3s;
+}
+
+.main_content--title:hover {
+  font-variation-settings: 'wght' 600;
 }
 
 .main_content--header p {
@@ -92,7 +97,7 @@ body {
   align-items: center;
   text-align: center;
   text-transform: lowercase;
-  transition: all .2s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .circle:hover {
