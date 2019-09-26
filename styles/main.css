@@ -86,8 +86,8 @@ body {
 } 
 
 .circle {
-  height: calc(12.5rem + 2vw);
-  width: calc(12.5rem + 2vw);
+  height: calc(12.5rem + 3vw);
+  width: calc(12.5rem + 3vw);
   background: #000000;
   border: calc(0.5rem + .75vw) solid #b6dad6;
   border-radius: 50%;
@@ -116,7 +116,7 @@ body {
 .circle_title {
   padding: calc(0.4rem + 0.2vw);
   height: calc(2.5rem + 0.5vw);
-  width: calc(8rem + 0.75vw);
+  width: calc(8rem + 2vw);
   border-radius: 25px;
   background-color: #ffffff;
   font-size: 1em;
@@ -177,7 +177,8 @@ body {
 } */ 
 
 @media (min-width: 520px) {
-  header .main_content--title,.main_content--header p {
+  header .main_content--title,
+  .main_content--header p {
     text-align: center;
   }
 }
@@ -220,14 +221,14 @@ body {
 
   .circle {
     margin: 0;
-    height: 12.2rem;
-    width: 12.2rem;
+    /* height: 16rem;
+    width: 16rem; */
   }
   
 
   #circle1 {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 3;
     align-self: normal;
     margin-top: 4.5rem;
   }
@@ -240,7 +241,7 @@ body {
 
   #circle3 {
     grid-column: 4;
-    grid-row: 2;
+    grid-row: 3;
     align-self: normal;
     margin: 2rem 0 0 1.5rem;
   }
