@@ -60,11 +60,6 @@ body {
   line-height: calc(1.1em + 0.5vw);
   text-align: right;
   margin: 2rem 0 0 0;
-  transition: font-variation-settings .3s;
-}
-
-.main_content--title:hover {
-  font-variation-settings: 'wght' 600;
 }
 
 .main_content--header p {
@@ -134,10 +129,11 @@ body {
 }
 
 .main-footer > p {
-  font-size: .6em;
+  font-size: .60em;
   margin: 0;
   text-align: center;
   padding: 0 2%;
+  letter-spacing: -0.053em;
 }
 
 .main-footer a {
@@ -203,6 +199,14 @@ body {
 
   .main_content--header h1 {
     text-align: left;
+  }
+
+  .main_content--title {
+    transition: font-variation-settings .3s;
+  }
+  
+  .main_content--title:hover {
+    font-variation-settings: 'wght' 600;
   }
 
   .text--wrapper p {
