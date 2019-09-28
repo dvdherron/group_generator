@@ -19,26 +19,31 @@
       </div>
     </header>
     <div class="group_generator_categorys">
-      <div class="circle category_circle">
-        <input type="text" placeholder="one group" onfocus="removePlaceholder(this)"
+      <div class="circle circle_MEDIUM">
+        <input id="input-one-group" type="text" placeholder="one group" onfocus="removePlaceholder(this)"
           onblur="applyPlaceholder(this, 'one group')">
       </div>
-      <div class="circle category_circle">
-        <input type="text" placeholder="groups of" onfocus="removePlaceholder(this)"
+      <div class="circle circle_MEDIUM">
+        <input id="input-groups-of" type="text" placeholder="groups of" onfocus="removePlaceholder(this)"
           onblur="applyPlaceholder(this, 'groups of')">
       </div>
     </div>
-    <div class="group_names--circles">
-      <div class="circle name1" id="circle1">
+    <div id="group_names--circles" class="group_names--circles">
+      <div class="circle circle_BIG name1" id="circle1">
         <h2 class="circle_title"> - - - </h2>
       </div>
-      <div class="circle name2" id="circle2">
+      <div class="circle circle_BIG name2" id="circle2">
         <h2 class="circle_title"> - - - </h2>
       </div>
-      <div class="circle name3" id="circle3">
+      <div class="circle circle_BIG name3" id="circle3">
         <h2 class="circle_title"> - - -</h2>
       </div>
     </div>
+    <!-- <div id="generated_groups"> -->
+      <ul id="one-group_container"></ul>
+      <div id="groups-of_container"></div>
+    <!-- </div> -->
+   
     <!-- <button id="resetBTN">reset</button> -->
   </main>
   <footer class="main-footer">

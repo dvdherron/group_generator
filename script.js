@@ -5,6 +5,12 @@
    'peter', 'quena', 'tim', 'tom', 'tony', 'ture', 'wei'
  ];
 
+ const inputOneGroup = document.getElementById('input-one-group');
+ const inputGroupsOf = document.getElementById('input-groups-of');
+
+ const genGroupsOf = document.getElementById('groups-of_container');
+ const genOneGroup = document.getElementById('one-group_container');
+
  (function () {
 
    var circle1 = document.getElementById('circle1');
@@ -22,16 +28,15 @@
    }
  }());
 
-
  /* 
-  * returns a random group classMates, of choosen size.
+  * returns a random group classMates, of chosen size.
   */
  function oneRandomGroupOf(groupSize) {
    return groupsOf(groupSize)[0];
  }
 
  /*
-  * Divides classMates in to groups of choosen size, and returns the groups.
+  * Divides classMates in to groups of chosen size, and returns the groups.
   */
  function groupsOf(groupSize) {
    shuffle(classMates);
@@ -49,6 +54,55 @@
      }
    });
    return groups;
+ }
+
+  /*
+  * Displays bubbles with randomized mates of chosen amount.
+  */
+ function showOneRandomGruopOf(groupSize) {
+   oneRandomGroupOf(groupSize).forEach(mate => {
+     var listItem = document.createElement("LI");
+     var headerNode = document.createElement("H6");
+     var node = document.createTextNode(mate);
+     headerNode.appendChild(node);
+     listItem.appendChild(headerNode);
+     listItem.classList.add('circle', 'circle_SMALL')
+     genOneGroup.appendChild(listItem);
+   });
+ }
+
+ /*
+  * Displays bubbles with randomized groups of chosen size.
+  * The circle / bubble will take 3 different sizes depending on
+  * the group size.
+  */
+ function showGruopsOf(groupSize) {
+   groupsOf(groupSize).forEach(group => {
+     var ul = document.createElement("UL");
+
+     group.forEach(mate => {
+       var listItem = document.createElement("LI");
+       var headerNode = document.createElement("H6");
+       var node = document.createTextNode(mate);
+       headerNode.appendChild(node);
+       listItem.appendChild(headerNode);
+       ul.appendChild(listItem);
+     });
+
+     switch (groupSize) {
+       case 2:
+       case 3:
+         ul.classList.add('circle', 'circle_MEDIUM-BIG');
+       case 4:
+       case 5:
+         ul.classList.add('circle', 'circle_BIG');
+         break;
+       default:
+         ul.classList.add('circle', 'circle_BIGGEST');
+     }
+
+     genGroupsOf.appendChild(ul);
+   });
  }
 
  /*
@@ -70,10 +124,40 @@
    return array;
  }
 
-function removePlaceholder(element){
-  element.placeholder = '';
-}
+ /*
+  * Adding an event listener to input field 'input-one-group'
+  */
+ inputOneGroup.addEventListener('keyup', function (e) {
+   var input = parseInt(inputOneGroup.value);
+   if (e.keyCode === 13 && Number.isInteger(input) && input !== 0) {
+     clearContent();
+     showOneRandomGruopOf(input);
+   }
+ });
 
-function applyPlaceholder(element, placeholder){
-  element.placeholder = placeholder;
-}
+ /*
+  * Adding an event listener to input field 'input-groups-of'
+  */
+ inputGroupsOf.addEventListener('keyup', function (e) {
+   var input = parseInt(inputGroupsOf.value);
+   if (e.keyCode === 13 && Number.isInteger(input) && input !== (0 || 1)) {
+     clearContent();
+     showGruopsOf(input);
+   }
+ });
+
+ /* Clears content */
+ function clearContent() {
+   document.getElementById('group_names--circles').style.display = 'none';
+   genOneGroup.innerHTML = '';
+   genGroupsOf.innerHTML = '';
+ }
+
+ function removePlaceholder(element) {
+   element.placeholder = '';
+ }
+
+ function applyPlaceholder(element, placeholder) {
+   element.value = '';
+   element.placeholder = placeholder;
+ }
