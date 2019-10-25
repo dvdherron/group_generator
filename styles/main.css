@@ -24,16 +24,14 @@ body {
     font-family: 'Recursive Sans','Segoe UI', Tahoma, sans-serif;
     font-variation-settings: 'wght' 600;
     margin: 0 5%;
-    /* height: 100vh; */
     overflow-x: hidden;
     font-size: calc(16px + .75vw);
     line-height: calc(1.1em + 0.25vw);
-    /* max-width: 100%; */
     position: relative;
-    /* min-width: 100%; */
     min-height: 100vh;
     height: auto;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 .main_content {
@@ -49,11 +47,6 @@ body {
   align-content: flex-end;
 }
 
-/* .text--wrapper {
-  flex: 0 0 30vw; 
-  margin: 0 1rem 2rem 12rem;
-} */
-
 .main_content--title {
   font-variation-settings: 'wght' 850;
   font-size: calc(48px + 1.5vw);
@@ -62,15 +55,53 @@ body {
   margin: 2rem 0 0 0;
 }
 
-.main_content--header p {
-  margin: .75rem 0;
-  text-align: right;
-  width: 20ch;
+.text--wrapper {
+  width: 25ch;
+  margin-top: 1rem;
 }
 
-/* header > p {
+.main_content--header p {
+  margin: 0;
   text-align: right;
-} */
+}
+
+#picker {
+  margin: 4rem 1rem;
+  /* width: 85vw; */
+}
+
+
+
+
+#picker > div {
+  border: 2px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 0.5em;
+  background: black;
+  color: white;
+  width: 100%;;
+}
+
+
+#picker label {
+  display: inline-block;
+}
+
+#picker select,
+#picker input {
+  margin-top: 0.5em;
+  border-radius: 10px;
+  padding: 0.2em;
+}
+
+
+#picker input {
+  padding: 10px;
+  width: 6ch;
+}
+
+
 
 .group_names--circles {
   display: flex;
