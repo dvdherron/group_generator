@@ -49,6 +49,10 @@ body {
   min-height: 100vh;
   height: auto;
   max-width: 100%;
+    
+    height: auto;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .main_content {
@@ -64,27 +68,68 @@ body {
   align-content: flex-end;
 }
 
-/* .text--wrapper {
-  flex: 0 0 30vw; 
-  margin: 0 1rem 2rem 12rem;
-} */
-
 .main_content--title {
   font-variation-settings: 'wght'850;
   font-size: calc(48px + 1vw);
+  font-variation-settings: 'wght' 850;
+  font-size: calc(48px + 1.5vw);
   line-height: calc(1.1em + 0.5vw);
   text-align: right;
   margin: 2rem 0 0 0;
 }
 
+.text--wrapper {
+  width: 25ch;
+  margin-top: 1rem;
+}
+
 .main_content--header p {
-  margin: .75rem 0;
+  margin: 0;
   text-align: right;
 }
 
-/* header > p {
-  text-align: right;
-} */
+#picker {
+  margin: 4rem 1rem;
+  /* width: 85vw; */
+}
+
+#btnGenerate {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+
+
+#picker > div {
+  border: 2px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 0.5em;
+  background: black;
+  color: white;
+  width: 100%;;
+}
+
+
+#picker label {
+  display: inline-block;
+}
+
+#picker select,
+#picker input {
+  margin-top: 0.5em;
+  border-radius: 10px;
+  padding: 0.2em;
+}
+
+
+#picker input {
+  padding: 10px;
+  width: 6ch;
+}
+
+
 
 .group_generator_categorys {
   margin: 0;
@@ -305,22 +350,32 @@ input::placeholder {
 
 @media (min-width: 520px) {
 
+/* @media (min-width: 520px) {
   header .main_content--title,
   .main_content--header p {
     text-align: center;
   }
 }
 
+} */
 @media (min-width: 870px) {
 
   /* body {
     max-height: 90vh;
   } */
 
+  #picker {
+    /* marg */
+  }
+
   .main_content {
     display: grid;
     grid-template-columns: 20vw 1fr 2fr;
     grid-template-rows: repeat(5, 8rem);
+  }
+
+  #btnGenerate {
+
   }
 
   .main_content--header {
@@ -345,10 +400,6 @@ input::placeholder {
   .text--wrapper p {
     text-align: left;
   }
-
-
-
-
 
   .group_names--circles {
     display: grid;
@@ -386,4 +437,5 @@ input::placeholder {
     align-self: normal;
     margin: 2rem 0 0 1.5rem;
   }
+}
 }
